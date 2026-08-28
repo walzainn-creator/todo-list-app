@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق قائمة المهام</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 قائمة مهامي</h1>
+            <p class="subtitle">نظّم مهامك اليومية بسهولة</p>
+        </div>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="أضف مهمة جديدة..." 
+                class="task-input"
+            >
+            <button id="addBtn" class="add-btn">إضافة</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="active">قيد الإنجاز</button>
+            <button class="filter-btn" data-filter="completed">مكتملة</button>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-label">إجمالي المهام:</span>
+                <span class="stat-value" id="totalTasks">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">المكتملة:</span>
+                <span class="stat-value" id="completedTasks">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">قيد الإنجاز:</span>
+                <span class="stat-value" id="activeTasks">0</span>
+            </div>
+        </div>
+
+        <ul class="task-list" id="taskList">
+            <!-- سيتم ملء المهام هنا -->
+        </ul>
+
+        <div class="empty-state" id="emptyState">
+            <p>🎉 لا توجد مهام حالياً</p>
+            <p class="empty-subtitle">ابدأ بإضافة مهمة جديدة</p>
+        </div>
+
+        <div class="actions-section">
+            <button id="clearCompleted" class="clear-btn">حذف المكتملة</button>
+            <button id="clearAll" class="clear-all-btn">حذف الكل</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
